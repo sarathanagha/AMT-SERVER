@@ -1,0 +1,19 @@
+{
+  "owners": [
+    {
+      "floor": "1",
+      "flat": "1",
+      "name": "G-1",
+      "vacant": true,
+      "owner": {
+        "name": "Sarath Chandra",
+        "phone": "7799802045"
+      },
+      "tenant": {
+        "name": "",
+        "phone": ""
+      },
+      "id": "f020139c-5e75-4342-ab93-7e41f028bc9b"
+    }
+  ]
+}
