@@ -15,5 +15,27 @@
       },
       "id": "f020139c-5e75-4342-ab93-7e41f028bc9b"
     }
-  ]
+  ],
+  "expenses": {
+    "03-2020": {
+      "electricity": 1000,
+      "water": 2000,
+      "watchmenSalary": 10000,
+      "plumbing": 0,
+      "carpentary": 0,
+      "electrician": 0,
+      "labour": 0,
+      "celebrations": 0
+    },
+    "04-2020": {
+      "electricity": 1000,
+      "water": 2000,
+      "watchmenSalary": 10000,
+      "plumbing": 0,
+      "carpentary": 0,
+      "electrician": 0,
+      "labour": 0,
+      "celebrations": 0
+    }
+  }
 }

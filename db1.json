@@ -23,6 +23,18 @@
         "bombay"
       ],
       "id": "21ebae42-cf71-46bc-aefb-e43dc36f0ba7"
-    }
+    },
+    {"expenses": {
+      "04-2020": {
+        "electricity": 1000,
+        "water": 2000,
+        "watchmenSalary": 10000,
+        "plumbing": 0,
+        "carpentary": 0,
+        "electrician": 0,
+        "labour": 0,
+        "celebrations": 0
+      }
+    }}
   ]
 }

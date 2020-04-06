@@ -1,13 +1,18 @@
-const recipeController = require('../controllers/recipe')
+const ownerController = require('../controllers/owners')
+const ExpenseController = require('../controllers/expenses')
 
 module.exports = (express) => {
   const router = express.Router()
 
-  router.get('/getAll', recipeController.getAll)
-  router.get('/:id', recipeController.getById)
-  router.post('/save', recipeController.save)
-  router.put('/:id', recipeController.update)
-  router.delete('/:id', recipeController.destroy)
+  router.get('/owners', ownerController.getAll)
+  router.get('/owners/:id', ownerController.getById)
+  router.post('/owners', ownerController.save)
+  router.put('/owners/:id', ownerController.update)
+  router.delete('/owners/:id', ownerController.destroy)
+
+  router.get('/expenses', ExpenseController.getAll)
+  router.get('/expenses/:period', ExpenseController.getByMonth)
+  
 
   return router
 }

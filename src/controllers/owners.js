@@ -1,4 +1,4 @@
-const task = require('../services/task')
+const task = require('../services/owners')
 const uuid = require('uuid')
 
 exports.getAll = (req, res) => {
