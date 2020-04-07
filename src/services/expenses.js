@@ -21,9 +21,9 @@ exports.getById = (id) => {
   return expenses[id];
 }
 
-exports.save = (owners) =>{
-  return db.get(DB_NAME)
-    .push(owners)
+exports.save = (newEntries) => {
+  let expenses = { ...db.get(DB_NAME).value(), ...newEntries }
+  return db.set(DB_NAME, expenses)
     .write();
 }
 

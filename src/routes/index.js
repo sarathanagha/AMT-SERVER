@@ -12,7 +12,8 @@ module.exports = (express) => {
 
   router.get('/expenses', ExpenseController.getAll)
   router.get('/expenses/:period', ExpenseController.getByMonth)
-  
+  router.post('/expenses', ExpenseController.save)
+
 
   return router
 }

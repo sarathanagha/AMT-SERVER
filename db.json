@@ -17,6 +17,16 @@
     }
   ],
   "expenses": {
+    "02-2020": {
+      "electricity": 1001,
+      "water": 2000,
+      "watchmenSalary": 10000,
+      "plumbing": 0,
+      "carpentary": 0,
+      "electrician": 0,
+      "labour": 0,
+      "celebrations": 0
+    },
     "03-2020": {
       "electricity": 1000,
       "water": 2000,

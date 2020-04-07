@@ -20,3 +20,13 @@ exports.getByMonth = async (req, res) => {
     data,
   })
 }
+
+exports.save = async (req, res) => {
+  const obj = req.body;
+  const data = await task.save(obj)
+  res.json({
+    status: 'OK',
+    message: 'success',
+    data,
+  })
+}
