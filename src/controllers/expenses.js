@@ -11,8 +11,8 @@ exports.getAll = (req, res) => {
   })
 }
 
-exports.getByMonth = async (req, res) => {
-  const id = req.params.period
+exports.getById = async (req, res) => {
+  const id = req.params.id;
   const data = await task.getById(id)
   res.json({
     status: 'OK',
@@ -23,10 +23,40 @@ exports.getByMonth = async (req, res) => {
 
 exports.save = async (req, res) => {
   const obj = req.body;
-  const data = await task.save(obj)
+  obj.id = uuid();
+  await task.save(obj)
+  const data = await task.getAll()
   res.json({
     status: 'OK',
     message: 'success',
+    data: data
+  })
+}
+
+exports.update = async (req, res) => {
+  const id = req.params.id
+  const obj = req.body
+  
+  await task.update(id, obj)
+
+  const data = await task.getAll()
+  
+  res.json({
+    status: 'OK',
+    message: 'success',
+    data,
+  })
+}
+
+exports.destroy = async (req, res) => {
+  const { id } = req.params
+
+  await task.remove(id)
+  const data = await task.getAll();
+
+  res.json({
+    status: 'OK',
+    message: 'data successfully deleted.',
     data,
   })
 }

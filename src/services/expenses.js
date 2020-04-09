@@ -16,16 +16,17 @@ exports.getAll = () => {
   return db.get(DB_NAME).value()
 }
 
-exports.getById = (id) => {
-  let expenses = db.get(DB_NAME).value();
-  return expenses[id];
-}
+exports.getById = (id) => (
+  db.get(DB_NAME)
+    .find({ id })
+    .value()
+)
 
-exports.save = (newEntries) => {
-  let expenses = { ...db.get(DB_NAME).value(), ...newEntries }
-  return db.set(DB_NAME, expenses)
-    .write();
-}
+exports.save = (expense) => (
+  db.get(DB_NAME)
+    .push(expense)
+    .write()
+)
 
 exports.update = (id, obj) => (
   db.get(DB_NAME)

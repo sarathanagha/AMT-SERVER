@@ -16,36 +16,12 @@
       "id": "f020139c-5e75-4342-ab93-7e41f028bc9b"
     }
   ],
-  "expenses": {
-    "02-2020": {
-      "electricity": 1001,
-      "water": 2000,
-      "watchmenSalary": 10000,
-      "plumbing": 0,
-      "carpentary": 0,
-      "electrician": 0,
-      "labour": 0,
-      "celebrations": 0
-    },
-    "03-2020": {
-      "electricity": 1000,
-      "water": 2000,
-      "watchmenSalary": 10000,
-      "plumbing": 0,
-      "carpentary": 0,
-      "electrician": 0,
-      "labour": 0,
-      "celebrations": 0
-    },
-    "04-2020": {
-      "electricity": 1000,
-      "water": 2000,
-      "watchmenSalary": 10000,
-      "plumbing": 0,
-      "carpentary": 0,
-      "electrician": 0,
-      "labour": 0,
-      "celebrations": 0
+  "expenses": [
+    {
+      "name": "Electricity",
+      "date": "04-2021",
+      "value": "10001",
+      "id": "9ba55b64-5274-442c-aa76-7c0407e866ac"
     }
-  }
+  ]
 }

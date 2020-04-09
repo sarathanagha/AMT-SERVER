@@ -11,8 +11,10 @@ module.exports = (express) => {
   router.delete('/owners/:id', ownerController.destroy)
 
   router.get('/expenses', ExpenseController.getAll)
-  router.get('/expenses/:period', ExpenseController.getByMonth)
+  router.get('/expenses/:id', ExpenseController.getById)
   router.post('/expenses', ExpenseController.save)
+  router.put('/expenses/:id', ExpenseController.update)
+  router.delete('/expenses/:id', ExpenseController.destroy)
 
 
   return router

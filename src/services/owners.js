@@ -20,11 +20,11 @@ exports.getById = (id) => (
     .value()
 )
 
-exports.save = (owners) =>{
-  return db.get('owners')
+exports.save = (owners) => (
+  db.get('owners')
     .push(owners)
-    .write();
-}
+    .write()
+)
 
 exports.update = (id, obj) => (
   db.get('owners')
