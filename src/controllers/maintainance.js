@@ -1,8 +1,8 @@
-const task = require('../services/owners')
+const task = require('../services/maintainance')
 const uuid = require('uuid')
 
 exports.getAll = (req, res) => {
-  const data = task.getAll('owners')  
+  const data = task.getAll()  
   res.json({
     status: 'OK',
     message: 'success',
@@ -22,10 +22,10 @@ exports.getById = async (req, res) => {
 }
 
 exports.save = async (req, res) => {
-  const obj = req.body
-  obj.id = uuid()
-  await task.save(obj)
-  const data = await task.getAll('owners')
+  const maintainance = req.body.maintainance
+  maintainance.id = uuid()
+  await task.save({ id: req.body.id, maintainance })
+  const data = await task.getAll()
   res.json({
     status: 'OK',
     message: 'success',
@@ -34,12 +34,12 @@ exports.save = async (req, res) => {
 }
 
 exports.update = async (req, res) => {
-  const id = req.params.id
-  const obj = req.body
+  const maintainanceId = req.params.id
+  const obj = req.body.maintainance
   
-  await task.update(id, obj)
+  await task.update(req.body.id, maintainanceId, obj)
 
-  const data = await task.getAll(id)
+  const data = await task.getAll()
   
   res.json({
     status: 'OK',
@@ -49,10 +49,10 @@ exports.update = async (req, res) => {
 }
 
 exports.destroy = async (req, res) => {
-  const { id } = req.params
+  const maintainanceId = req.params.id
 
-  await task.remove(id)
-  const data = await task.getAll(id);
+  await task.remove(req.body.id, maintainanceId)
+  const data = await task.getAll();
 
   res.json({
     status: 'OK',

@@ -10,9 +10,7 @@ const initialData = {
 
 db.defaults(initialData).write()
 
-exports.getAll = () => (
-  db.get('owners').value()
-)
+exports.getAll = () => db.get('owners').value()
 
 exports.getById = (id) => (
   db.get('owners')

@@ -13,6 +13,13 @@
         "name": "",
         "phone": ""
       },
+      "maintainance": [
+        {
+          "id": "36ec08ca-a88b-4b6d-b741-f9e984e06786",
+          "commonMaintainance": 800,
+          "water": 200
+        }
+      ],
       "id": "f020139c-5e75-4342-ab93-7e41f028bc9b"
     }
   ],
