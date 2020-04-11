@@ -16,6 +16,7 @@ module.exports = (express) => {
   router.post('/expenses', ExpenseController.save)
   router.put('/expenses/:id', ExpenseController.update)
   router.delete('/expenses/:id', ExpenseController.destroy)
+  router.get('/list', ExpenseController.list)
 
   router.get('/maintainance', MaintainanceController.getAll)
   router.get('/maintainance/:id', MaintainanceController.getById)

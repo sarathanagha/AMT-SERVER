@@ -21,14 +21,60 @@
         }
       ],
       "id": "f020139c-5e75-4342-ab93-7e41f028bc9b"
+    },
+    {
+      "floor": "1",
+      "flat": "2",
+      "name": "G-2",
+      "vacant": true,
+      "owner": {
+        "name": "Deepthi Priya",
+        "phone": "1234"
+      },
+      "tenant": {
+        "name": "",
+        "phone": ""
+      },
+      "maintainance": [],
+      "id": "2ff3062a-e32b-4999-839f-e5942f0f48ca"
+    },
+    {
+      "floor": "1",
+      "flat": "3",
+      "name": "G-3",
+      "vacant": true,
+      "owner": {
+        "name": "Vihari",
+        "phone": "1234"
+      },
+      "tenant": {
+        "name": "",
+        "phone": ""
+      },
+      "maintainance": [],
+      "id": "85e5a586-2d63-41c0-a50b-43119735d7c8"
     }
   ],
   "expenses": [
     {
       "name": "Electricity",
-      "date": "04-2021",
+      "date": "2020-04-01",
       "value": "10001",
       "id": "9ba55b64-5274-442c-aa76-7c0407e866ac"
+    },
+    {
+      "name": "Watchmen Salary",
+      "date": "2020-04-15",
+      "value": "50000",
+      "id": "23703368-457c-4d13-b485-065d0757a28e"
     }
-  ]
+  ],
+  "expenseItems": {
+    "electricity": "Electricity",
+    "watchmenSalary": "Watchmen Salary",
+    "water": "Water Bill",
+    "carpentary": "Carpentary Bill",
+    "electrician": "Electrician Bill",
+    "plumbing": "PlumbingBill"
+  }
 }

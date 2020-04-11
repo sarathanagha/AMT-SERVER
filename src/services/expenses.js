@@ -40,3 +40,8 @@ exports.remove = (id) => (
     .remove({ id })
     .write()
 )
+
+exports.list = () => (
+  db.get('expenseItems')
+    .value()
+)

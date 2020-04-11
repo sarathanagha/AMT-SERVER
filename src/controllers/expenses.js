@@ -60,3 +60,12 @@ exports.destroy = async (req, res) => {
     data,
   })
 }
+
+exports.list = async (req, res) => {
+  const data = await task.list();
+  res.json({
+    status: 'OK',
+    message: 'data successfully deleted.',
+    data,
+  })
+}
