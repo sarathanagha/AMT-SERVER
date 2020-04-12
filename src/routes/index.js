@@ -1,15 +1,15 @@
-const ownerController = require('../controllers/owners')
+const OwnerController = require('../controllers/owners')
 const ExpenseController = require('../controllers/expenses')
 const MaintainanceController = require('../controllers/maintainance');
 
 module.exports = (express) => {
   const router = express.Router()
 
-  router.get('/owners', ownerController.getAll)
-  router.get('/owners/:id', ownerController.getById)
-  router.post('/owners', ownerController.save)
-  router.put('/owners/:id', ownerController.update)
-  router.delete('/owners/:id', ownerController.destroy)
+  router.get('/owners', OwnerController.getAll)
+  router.get('/owners/:id', OwnerController.getById)
+  router.post('/owners', OwnerController.save)
+  router.put('/owners/:id', OwnerController.update)
+  router.delete('/owners/:id', OwnerController.destroy)
 
   router.get('/expenses', ExpenseController.getAll)
   router.get('/expenses/:id', ExpenseController.getById)
