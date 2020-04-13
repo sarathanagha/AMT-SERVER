@@ -17,7 +17,11 @@
         {
           "id": "36ec08ca-a88b-4b6d-b741-f9e984e06786",
           "commonMaintainance": 800,
-          "water": 200
+          "water": 200,
+          "previousReading": 1000,
+          "presentReading": 2000,
+          "unitRate": 0.25,
+          "forPeriod": "March 2020"
         }
       ],
       "id": "f020139c-5e75-4342-ab93-7e41f028bc9b"
