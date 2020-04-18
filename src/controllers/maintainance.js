@@ -1,6 +1,17 @@
 const task = require('../services/maintainance')
 const uuid = require('uuid')
 
+
+exports.getWaterMaintainance = (req, res) => {
+  const period = req.params.period
+  const data = task.getWaterMaintainance(period)  
+  res.json({
+    status: 'OK',
+    message: 'success',
+    data,
+  })
+}
+
 exports.getAll = (req, res) => {
   const data = task.getAll()  
   res.json({

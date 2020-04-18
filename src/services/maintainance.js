@@ -7,6 +7,20 @@ const db = low(adapter)
 
 let getMaintainance = (id) => db.get('owners').find({ id }).get('maintainance')
 
+exports.getWaterMaintainance = (period) => {
+  let owners = db.get('owners').value();
+  let maintainance = owners.map((owner, index)=> {
+    let waterAttributes = owner.maintainance.find((maintainance)=> maintainance.forPeriod === period) || {};
+    return {
+      index: index+1,
+      name: owner.name,
+      owner: owner.owner,
+      ...waterAttributes,
+    }
+  });
+  return maintainance;
+}
+
 exports.getAll = () => {
   let owners = db.get('owners').value();
   let maintainance = {};

@@ -21,7 +21,7 @@
           "previousReading": 1000,
           "presentReading": 2000,
           "unitRate": 0.25,
-          "forPeriod": "March 2020"
+          "forPeriod": "March-2020"
         }
       ],
       "id": "f020139c-5e75-4342-ab93-7e41f028bc9b"
@@ -71,6 +71,12 @@
       "date": "2020-04-15",
       "value": "50000",
       "id": "23703368-457c-4d13-b485-065d0757a28e"
+    },
+    {
+      "name": "Carpentary Bill",
+      "date": "2020-04-15",
+      "value": "3000",
+      "id": "33336a7f-6f15-41f0-9f77-9e4a5de8899b"
     }
   ],
   "expenseItems": {

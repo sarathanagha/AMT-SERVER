@@ -23,6 +23,7 @@ module.exports = (express) => {
   router.post('/maintainance', MaintainanceController.save)
   router.put('/maintainance/:id', MaintainanceController.update)
   router.delete('/maintainance/:id', MaintainanceController.destroy)
+  router.get('/waterMaintainance/:period', MaintainanceController.getWaterMaintainance)
 
 
   return router
